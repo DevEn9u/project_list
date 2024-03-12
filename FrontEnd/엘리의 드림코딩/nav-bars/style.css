@@ -1,0 +1,88 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color:#263343;
+  --accent-color: #d49466;
+}
+
+body {
+  font-family: 'noto sans';
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+li {
+  list-style: none;
+}
+.navbar {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 12px;
+}
+.navbar_logo {
+  font-size: 24px;
+}
+.navbar_logo i {
+  color:  var(--accent-color);
+}
+.navbar_menu {
+  display: flex;
+}
+.navbar_menu li {
+  text-align: center;
+  padding: 8px 12px;
+}
+.navbar_menu li:hover {
+  background-color:  var(--accent-color);
+  border-radius: 2px;
+}
+.navbar_icons {
+  display: flex;
+}
+.navbar_icons li {
+  padding: 8px 6px;
+  color: var(--text-color);
+  font-size: 22px;
+}
+.navbar_toggleBtn {
+  display: none; /* position이 absolute이기에 미디어쿼리로 화면이 작아졌을때만 나타나게하려 함 */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* 아이템들을 가운데 오게 하려면 브라우저 창이 작아져도 폭이 100%가 되어야함*/
+    padding-left: 0;
+    display: none;
+  }
+  .navbar_menu li {
+    width: 100%; /* hover 상태일 때 하이라이트하게 만듬 */
+    padding: 8px 6px; /* 하이라이트 크기를 크게 하기  */
+    text-align: center;
+  }
+  .navbar_icons {
+    justify-content: center; /* flex-direction이 column일 경우 algn-items를 사용하고 row일 경우 justify-content 사용 */
+    width: 100%; 
+    padding-left: 0;
+    display: none;
+  }
+  .navbar_toggleBtn { /* 햄버거 모양 메뉴 아이콘 스타일 */
+    position: absolute; /* 문서 흐름에서 나와서 우상단에 위치 */
+    right: 32px; /* 오른쪽에서 32px 떨어진 곳에 위치 */
+    font-size: 20px;
+    color: var(--accent-color);
+    display: block;
+  }
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}
