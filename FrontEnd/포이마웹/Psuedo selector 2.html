@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {color:skyblue;} 
+        a:visited {color:red;}
+        a:hover {color: blue;font-weight: bold;}
+        a:active {color:lightgreen;}
+        
+     /* text input 요소와 password input 요소에 포커스가 들어와 있을 때 */
+        input[type=text]:focus,
+        input[type=password]:focus {
+      color: red;
+    }
+    </style>
+</head>
+<body>
+    <a href="#" target="_blank">This is a link</a><br><br>
+    ID : <input type="text" value="I'll be red when focused"><br>
+    Password : <input type="password" placeholder="12345678">>
+    <!-- placehorder 속성은 입력 필드에 사용자가 적절한 값을 입력할 수 있도록 하는 도움말-->
+</body>
+</html>

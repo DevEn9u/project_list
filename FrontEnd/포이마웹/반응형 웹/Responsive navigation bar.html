@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          /* 세로  */
+          * { color: black; }
+          /* 가로 */
+          /* Desktop의 화면은 가로화면(landscape)이므로 아래 rule이 적용된다. */
+          /*
+          @media screen and (orientation: landscape) {
+            { color: blue; }
+          }
+          */
+      
+          /* Landscape */
+          @media screen
+            /* 디바이스가 모바일일때(device-width 0 ~ 768px) */
+            and (max-device-width: 760px)
+            /* 가로 */
+            and (orientation: landscape) {
+            * { color: blue; }
+          }
+        </style>
+      </head>
+      <body>
+        <h1>@media practice: orientation</h1>
+        <p>TEST.</p>
+      </body>
+</html>
+

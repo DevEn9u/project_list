@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            width:100px;
+            height:30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            animation: move 3s infinite;
+            
+        }
+        @keyframes move {
+            from {left: 0px;}
+            to {left: 500px;}
+        }
+        #div1{animation-timing-function: linear;}
+        #div2{animation-timing-function: ease;}
+        #div3{animation-timing-function: ease-in;}
+        #div4{animation-timing-function: ease-out;}
+        #div5{animation-timing-function: ease-in-out;}
+        #div6{animation-timing-function: steps(7,end);}
+        #div7{animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);}
+    </style>
+</head>
+<body>
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
+    <div id="div6">steps</div>
+    <div id="div7">cubic-bezier</div>
+</body>
+</html>

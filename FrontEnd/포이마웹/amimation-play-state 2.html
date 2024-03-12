@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            from {left: 0;}
+            to {left: 500px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button class="start">start animation</button>
+    <button class="pause">pause animation</button>
+
+    <script>
+        const box = document.querySelector('.box');
+        document.querySelector('.start').addEventListener('click', function() {box.style.animationPlayState = 'running';});
+
+        document.querySelector('.pause').addEventListener('click', function () {box.style.animationPlayState = 'paused';});
+    </script>
+</body>
+</html>
